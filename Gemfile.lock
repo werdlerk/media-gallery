@@ -177,7 +177,6 @@ PLATFORMS
 
 DEPENDENCIES
   better_errors
-  binding_of_caller
   bootstrap-sass
   byebug
   coffee-rails (~> 4.1.0)
