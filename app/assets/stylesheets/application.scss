@@ -12,4 +12,9 @@
  *
  *= require_tree .
  *= require_self
+ * ## = require font-awesome
+ * ## = require jquery-ui/sortable
+ * ## = require jquery-ui/autocomplete
  */
+@import "bootstrap-sprockets";
+@import "bootstrap";
