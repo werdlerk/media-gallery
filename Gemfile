@@ -52,5 +52,6 @@ group :development, :test do
   gem 'spring'
 
   gem 'shoulda-matchers'
+  gem 'guard-rspec'
+  gem 'capybara'
 end
-
