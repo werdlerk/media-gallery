@@ -42,6 +42,9 @@ gem 'jbuilder', '~> 2.0'
 # Bootstrap view framework
 gem 'bootstrap-sass'
 
+# Font awesome
+gem 'font-awesome-sass'
+
 
 group :development do
   gem 'thin'
