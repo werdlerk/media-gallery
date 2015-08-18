@@ -1,1 +1,5 @@
-Dit is de index
+.row
+  - (1..8).each do |i|
+    .col-xs-6.col-md-3
+      = link_to image_path("pics/#{i}.jpg"), class: "thumbnail", rel: "lightbox[group]" do
+        = image_tag "pics/#{i}.jpg", class: 'group1', title: 'Image Title'
