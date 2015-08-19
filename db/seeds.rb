@@ -5,3 +5,12 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Media.destroy_all
+
+(1..8).each do |i|
+  Media.create(url: "http://brocknunn.com/untame/bootstrap-gallery/img/pics/#{i}.jpg", user_id: 1 )
+end
+(1..8).each do |i|
+  Media.create(url: "http://brocknunn.com/untame/bootstrap-gallery/img/pics/#{i}.jpg", user_id: 1 )
+end

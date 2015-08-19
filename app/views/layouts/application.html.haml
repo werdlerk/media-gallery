@@ -15,10 +15,31 @@
       = javascript_include_tag 'https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js'
       = javascript_include_tag 'https://oss.maxcdn.com/respond/1.4.2/respond.min.js'
   %body
+    %nav.navbar.navbar-default.navbar-fixed-top
+      .container
+        .navbar-header
+          %button.navbar-toggle.collapsed{ type: 'button', 'data-toggle' => 'collapse', 'data-target' => '#navbar', 'aria-expanded' => 'false', 'aria-controls' => 'navbar' }
+            %span.sr-only Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          = link_to 'Media Gallery', root_path, class: 'navbar-brand'
+        #navbar.navbar-collapse.collapse
+          %ul.nav.navbar-nav.navbar-right
+            %li.active= link_to 'Overview', root_path
+            %li
+              = link_to icon('cloud-upload', class: 'fw fa-lg') + ' Upload'
+            %li.dropdown
+              = link_to '#', class: 'dropdown-toggle', 'data-toggle' => 'dropdown', role: 'button', 'aria-haspopup' => 'true', 'aria-expanded' => 'false' do
+                = icon('user', class: 'fw fa-lg')
+                Username
+                %span.caret
+              %ul.dropdown-menu
+                %li= link_to icon('cog', class: 'fw') + ' Account'
+                %li= link_to icon('wrench', class: 'fw') + ' Category management'
+                %li= link_to icon('sign-out', class: 'fw') + ' Logout'
 
     .container
-      .application-header
-        %h2 Media Gallery
 
       = yield
 

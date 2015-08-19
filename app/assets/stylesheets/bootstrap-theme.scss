@@ -4,8 +4,9 @@
    ========================================================================== */
 
 body {
-  background: image-url('black_lozenge.png') repeat;
+  padding-top: 60px;
 }
+
 .centered {
   margin: auto auto;
   display: block;
@@ -13,12 +14,11 @@ body {
   margin-bottom: 25px;
 }
 
-.thumbnail {
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  border-radius: 0px;
-  border: 1px solid #444;
-  background-color: transparent;
+a.thumbnail {
+
+  &:hover, &:focus, &.active {
+    border-color: #1c73a5;
+  }
 
   img {
     opacity:.75;
@@ -29,20 +29,22 @@ body {
   }
 }
 
-.application-header {
-  h2 {
-    font-family: 'Yesteryear', arial, helvetica, sans;
-    color: #eee;
-    text-align: center;
-    margin-bottom: 15px;
-    font-size: 4.5em;
-    font-weight: 200;
-    line-height: 1.65em;
-    border-bottom: 1px solid #000;
-    text-shadow: 3px 4px 0px rgba(0,0,0,.76);
+.navbar-fixed-top {
+
+  .navbar-header {
+
+    a.navbar-brand {
+      font-family: 'Yesteryear', arial, helvetica, sans;
+      text-align: center;
+      font-size: 3em;
+      font-weight: 200;
+      text-shadow: 3px 4px 0px #1c73a5;
+      position: relative;
+      top: 5px;
+      z-index: 105;
+    }
   }
 }
-
 
 
 /* Sticky footer styles
@@ -61,8 +63,8 @@ body {
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 30px;
-  background-color: #333;
-  color: #ccc;
+  background-color: #3097d1;
+  color: rgba(255, 255, 255, 0.5);
 
   p {
     line-height: 30px;
