@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20150806200945) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "audio_infos", force: :cascade do |t|
     t.integer "duration"
     t.integer "size"
@@ -27,7 +30,7 @@ ActiveRecord::Schema.define(version: 20150806200945) do
     t.datetime "updated_at"
   end
 
-  add_index "comments", ["commentable_type", "commentable_id"], name: "index_comments_on_commentable_type_and_commentable_id"
+  add_index "comments", ["commentable_type", "commentable_id"], name: "index_comments_on_commentable_type_and_commentable_id", using: :btree
 
   create_table "image_infos", force: :cascade do |t|
     t.integer "width"
@@ -44,8 +47,8 @@ ActiveRecord::Schema.define(version: 20150806200945) do
     t.datetime "updated_at"
   end
 
-  add_index "media", ["media_info_type", "media_info_id"], name: "index_media_on_media_info_type_and_media_info_id"
-  add_index "media", ["user_id"], name: "index_media_on_user_id"
+  add_index "media", ["media_info_type", "media_info_id"], name: "index_media_on_media_info_type_and_media_info_id", using: :btree
+  add_index "media", ["user_id"], name: "index_media_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email"
