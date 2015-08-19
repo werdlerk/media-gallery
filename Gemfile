@@ -13,7 +13,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
-gem 'unicorn'
+# gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -45,6 +45,10 @@ gem 'bootstrap-sass'
 # Font awesome
 gem 'font-awesome-sass'
 
+# Puma webserver
+# https://devcenter.heroku.com/articles/deploying-rails-applications-with-the-puma-web-server
+gem 'puma'
+
 
 group :development do
   gem 'thin'
@@ -75,4 +79,14 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+end
+
+group :production do
+  # Heroku specific gem for platform features
+  gem 'rails_12factor'
+  # Heroku specific gem for logging
+  gem 'rails_stdout_logging'
+  # Heroku specific gem for having rails serve statis assets
+  gem 'rails_serve_static_assets'
+  # https://devcenter.heroku.com/articles/ruby-support#injected-plugins
 end
