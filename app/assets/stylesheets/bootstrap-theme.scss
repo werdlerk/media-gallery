@@ -18,14 +18,14 @@ a.thumbnail {
 
   &:hover, &:focus, &.active {
     border-color: #1c73a5;
+
+    img {
+      opacity: 1;
+    }
   }
 
   img {
     opacity:.75;
-
-    &:hover{
-      opacity:1;
-    }
   }
 }
 

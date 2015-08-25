@@ -148,36 +148,36 @@ $text-color:            #1e3948;
 //
 //## For each of Bootstrap's buttons, define text, background and border color.
 
-// $btn-font-weight:                normal
+$btn-font-weight:                12px;
 
-// $btn-default-color:              #333
-// $btn-default-bg:                 #fff
-// $btn-default-border:             #ccc
+$btn-default-color:              #536570;
+$btn-default-bg:                 transparent;
+$btn-default-border:             #536570;
 
-// $btn-primary-color:              #fff
-// $btn-primary-bg:                 $brand-primary
-// $btn-primary-border:             darken($btn-primary-bg, 5%)
+$btn-primary-color:              #2a88bd;
+$btn-primary-bg:                 transparent;
+$btn-primary-border:             #2a88bd;
 
-// $btn-success-color:              #fff
-// $btn-success-bg:                 $brand-success
-// $btn-success-border:             darken($btn-success-bg, 5%)
+$btn-success-color:              #44a762;
+$btn-success-bg:                 transparent;
+$btn-success-border:             #44a762;
 
-// $btn-info-color:                 #fff
-// $btn-info-bg:                    $brand-info
-// $btn-info-border:                darken($btn-info-bg, 5%)
+$btn-info-color:                 #7da8c3;
+$btn-info-bg:                    transparent;
+$btn-info-border:                #7da8c3;
 
-// $btn-warning-color:              #fff
-// $btn-warning-bg:                 $brand-warning
-// $btn-warning-border:             darken($btn-warning-bg, 5%)
+$btn-warning-color:              #c5b142;
+$btn-warning-bg:                 transparent;
+$btn-warning-border:             #c5b142;
 
-// $btn-danger-color:               #fff
-// $btn-danger-bg:                  $brand-danger
-// $btn-danger-border:              darken($btn-danger-bg, 5%)
+$btn-danger-color:               #aa4a24;
+$btn-danger-bg:                  transparent;
+$btn-danger-border:              #aa4a24;
 
 // $btn-link-disabled-color:        $gray-light
 
 // Allows for customizing button radius independently from global border radius
-// $btn-border-radius-base:         $border-radius-base
+$btn-border-radius-base:         3px;
 // $btn-border-radius-large:        $border-radius-large
 // $btn-border-radius-small:        $border-radius-small
 
@@ -748,7 +748,7 @@ $navbar-default-toggle-border-color:       rgba(255, 255, 255, 0.8);
 //##
 
 //** Padding around the thumbnail image
-$thumbnail-padding:           15px;
+// $thumbnail-padding:           4px;
 //** Thumbnail background color
 $thumbnail-bg:                #fff;
 //** Thumbnail border color
