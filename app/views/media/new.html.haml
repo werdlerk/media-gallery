@@ -1,0 +1,16 @@
+= render 'shared/validation_messages', object: @media
+
+.panel.panel-default
+  .panel-heading
+    %h3.panel-title Upload media
+  .panel-body
+    = form_for @media do |f|
+      %p.help-block
+        Enter the URL of the media item to upload.
+
+      .form-group
+        = f.label :url
+        = f.url_field :url, class: 'form-control'
+
+      = f.submit 'Save', class: 'btn btn-primary'
+      = link_to 'Cancel', media_index_path, class: 'btn btn-default'

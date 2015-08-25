@@ -8,7 +8,8 @@ describe Media do
   end
 
   context "validations" do
-
+    it { should validate_presence_of :url }
+    it { should validate_presence_of :user }
   end
 
   context "methods" do
