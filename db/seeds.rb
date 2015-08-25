@@ -8,9 +8,11 @@
 
 Media.destroy_all
 
+user = User.create(email: 'koen@werdler.com', name: 'Koen', password: 'Puntenburgerlaan1-A')
+
 (1..8).each do |i|
-  Media.create(url: "http://brocknunn.com/untame/bootstrap-gallery/img/pics/#{i}.jpg", user_id: 1 )
+  Media.create(url: "http://brocknunn.com/untame/bootstrap-gallery/img/pics/#{i}.jpg", user: user)
 end
 (1..8).each do |i|
-  Media.create(url: "http://brocknunn.com/untame/bootstrap-gallery/img/pics/#{i}.jpg", user_id: 1 )
+  Media.create(url: "http://brocknunn.com/untame/bootstrap-gallery/img/pics/#{i}.jpg", user: user )
 end
