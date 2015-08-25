@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.2.2'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
 
@@ -84,9 +86,4 @@ end
 group :production do
   # Heroku specific gem for platform features
   gem 'rails_12factor'
-  # Heroku specific gem for logging
-  gem 'rails_stdout_logging'
-  # Heroku specific gem for having rails serve statis assets
-  gem 'rails_serve_static_assets'
-  # https://devcenter.heroku.com/articles/ruby-support#injected-plugins
 end
