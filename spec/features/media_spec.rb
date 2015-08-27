@@ -32,6 +32,8 @@ feature 'Media' do
 
     expect(page).to have_content('Media uploaded')
     expect(current_path).to eq media_index_path
+
+    expect(page).to have_xpath("//img[@src = 'http://i59.tinypic.com/voo5dv.jpg']")
   end
 
   scenario 'upload media without url shows validation error' do
