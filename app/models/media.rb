@@ -4,4 +4,6 @@ class Media < ActiveRecord::Base
   has_many :comments, as: :commentable
 
   validates :url, :user, presence: true
+
+  scope :newest_first, -> { order('created_at desc') }
 end

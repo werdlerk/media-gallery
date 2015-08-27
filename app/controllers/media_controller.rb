@@ -1,7 +1,7 @@
 class MediaController < ApplicationController
 
   def index
-    @media = Media.all
+    @media = Media.newest_first
   end
 
   def new
