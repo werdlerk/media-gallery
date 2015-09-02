@@ -16,7 +16,7 @@
 // $gray-light:             lighten($gray-base, 46.7%) // #777
 // $gray-lighter:           lighten($gray-base, 93.5%) // #eee
 
-$brand-primary:         #FFF; // #337ab7
+$brand-primary:         #1e3948; // #337ab7
 // $brand-success:         #5cb85c
 // $brand-info:            #5bc0de
 // $brand-warning:         #f0ad4e
@@ -44,13 +44,13 @@ $text-color:            #1e3948;
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-// $font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif
+$font-family-sans-serif:  "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 // $font-family-serif:       Georgia, "Times New Roman", Times, serif
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 // $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace
 // $font-family-base:        $font-family-sans-serif
 
-// $font-size-base:          14px
+$font-size-base:          14px;
 // $font-size-large:         ceil(($font-size-base * 1.25)) // ~18px
 // $font-size-small:         ceil(($font-size-base * 0.85)) // ~12px
 
@@ -151,27 +151,27 @@ $text-color:            #1e3948;
 $btn-font-weight:                12px;
 
 $btn-default-color:              #536570;
-$btn-default-bg:                 transparent;
+$btn-default-bg:                 white;
 $btn-default-border:             #536570;
 
-$btn-primary-color:              #2a88bd;
-$btn-primary-bg:                 transparent;
+$btn-primary-color:              #ffffff;
+$btn-primary-bg:                 #3097d1;
 $btn-primary-border:             #2a88bd;
 
-$btn-success-color:              #44a762;
-$btn-success-bg:                 transparent;
+$btn-success-color:              #ffffff;
+$btn-success-bg:                 #44a762;
 $btn-success-border:             #44a762;
 
-$btn-info-color:                 #7da8c3;
-$btn-info-bg:                    transparent;
+$btn-info-color:                 #ffffff;
+$btn-info-bg:                    #8eb4cb;
 $btn-info-border:                #7da8c3;
 
-$btn-warning-color:              #c5b142;
-$btn-warning-bg:                 transparent;
+$btn-warning-color:              #ffffff;
+$btn-warning-bg:                 #cbb956;
 $btn-warning-border:             #c5b142;
 
-$btn-danger-color:               #aa4a24;
-$btn-danger-bg:                  transparent;
+$btn-danger-color:               #ffffff;
+$btn-danger-bg:                  #bf5329;
 $btn-danger-border:              #aa4a24;
 
 // $btn-link-disabled-color:        $gray-light

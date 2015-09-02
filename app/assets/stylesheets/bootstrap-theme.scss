@@ -6,6 +6,17 @@
 body {
   padding-top: 60px;
 }
+body.blank { padding:0; margin:0; }
+
+a {
+  color: #3097d1;
+  text-decoration: none;
+
+  &:focus, &:active {
+    color: #216a94;
+    text-decoration: underline;
+  }
+}
 
 .centered {
   margin: auto auto;
@@ -13,6 +24,51 @@ body {
   width: 185px;
   margin-bottom: 25px;
 }
+
+.us {
+  display: table;
+  width: 100%;
+  height: 100vh;
+
+  .uu {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+.gc {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+
+/* Application layout
+-------------------------------------------------- */
+
+
+.navbar-fixed-top {
+
+  .navbar-header {
+
+    a.navbar-brand {
+      font-family: 'Yesteryear', arial, helvetica, sans;
+      text-align: center;
+      font-size: 3em;
+      font-weight: 200;
+      text-shadow: 3px 4px 0px #1c73a5;
+      position: relative;
+      top: 5px;
+      z-index: 105;
+    }
+  }
+}
+
+
+/* Media index
+-------------------------------------------------- */
 
 a.thumbnail {
 
