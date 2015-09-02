@@ -66,3 +66,41 @@ feature "Logging out" do
   end
 
 end
+
+feature "Registration" do
+
+  scenario "Register user" do
+    visit root_path
+    expect(page).to have_content "Login"
+    click_link "Login"
+
+    expect(page).to have_link "Sign up"
+    click_link "Sign up"
+
+    expect(page).to have_button "Sign up"
+    within("form#register") do
+      fill_in "Name", with: 'John Doe'
+      fill_in "E-mail address", with: 'test@example.com'
+      fill_in "Password", with: 'password'
+      fill_in "Password confirmation", with: 'password'
+    end
+    click_button 'Sign up'
+
+    expect(page).to have_css '.alert.alert-success'
+  end
+
+  scenario "Register user with invalid properties" do
+    visit register_path
+    expect(page).to have_button "Sign up"
+
+    within("form#register") do
+      fill_in "E-mail address", with: 'test@example.com'
+      fill_in "Password", with: 'password'
+      fill_in "Password confirmation", with: 'password'
+    end
+    click_button 'Sign up'
+
+    expect(page).to have_content "Name can't be blank"
+  end
+
+end

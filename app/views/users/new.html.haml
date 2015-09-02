@@ -1,0 +1,23 @@
+.gc.us
+  .uu
+    = form_for @user, url: register_path, html: { id:'register' } do |f|
+      = render 'shared/messages'
+      = render 'shared/validation_messages', object: @user
+
+      = link_to 'Media Gallery', root_path, class:'brand'
+
+      %h2 Sign up
+
+      = f.text_field :name, class: 'form-control first-input', placeholder: 'Name', required: true, autofocus: true
+
+      = f.email_field :email, class: 'form-control', placeholder: 'E-mail address', required: true
+
+      = f.password_field :password, class: 'form-control', placeholder: 'Password', required: true
+
+      = f.password_field :password_confirmation, class: 'form-control last-input', placeholder: 'Password confirmation', required: true
+
+      .buttons
+        = submit_tag 'Sign up', class: 'btn btn-primary'
+
+      .links
+        = link_to 'I already have an account', login_path

@@ -8,8 +8,10 @@ Rails.application.routes.draw do
   resources :media
 
   resources :sessions, only: [:new, :create, :destroy]
+  resources :users, only: [:new, :create]
 
-  get 'register' => 'sessions#new'
+  get 'register' => 'users#new'
+  post 'register' => 'users#create'
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'

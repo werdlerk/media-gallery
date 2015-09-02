@@ -86,10 +86,11 @@ a.thumbnail {
   }
 }
 
-/* Login page
+/* Login page & Registration page
 -------------------------------------------------- */
 
-form#login {
+form#login,
+form#register {
   max-width: 280px;
   margin-top: -60px;
   margin-right: auto !important;
@@ -109,16 +110,7 @@ form#login {
     margin-bottom: 40px;
   }
 
-  input[type="email"] {
-    margin-bottom: 15px;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-  input[type="password"] {
-    margin-bottom: 30px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-  }
+
 
   .form-control {
     position: relative;
@@ -126,8 +118,23 @@ form#login {
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
     padding: 10px;
     font-size: 16px;
+    margin-bottom: 15px;
+
+    .first-input {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+    .last-input {
+      margin-bottom: 30px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
   }
 
   .buttons {

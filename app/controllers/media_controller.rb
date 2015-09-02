@@ -10,7 +10,7 @@ class MediaController < ApplicationController
 
   def create
     @media = Media.new(media_params)
-    @media.user = User.first
+    @media.user = current_user
 
     if @media.save
       flash[:success] = "Media uploaded"
