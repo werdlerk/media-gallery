@@ -1,0 +1,29 @@
+%nav.navbar.navbar-default.navbar-fixed-top
+  .container
+    .navbar-header
+      %button.navbar-toggle.collapsed{ type: 'button', 'data-toggle' => 'collapse', 'data-target' => '#navbar', 'aria-expanded' => 'false', 'aria-controls' => 'navbar' }
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      = link_to 'Media Gallery', root_path, class: 'navbar-brand'
+    #navbar.navbar-collapse.collapse
+      %ul.nav.navbar-nav.navbar-right
+        %li{ class: menu_active?(:overview) ? 'active' : nil }
+          = link_to 'Gallery', media_index_path
+
+        - if user_logged_in?
+          %li{ class: menu_active?(:media_upload) ? 'active' : nil }
+            = link_to icon('cloud-upload', class: 'fw fa-lg') + ' Upload', new_media_path
+          %li.dropdown
+            = link_to '#', class: 'dropdown-toggle', 'data-toggle' => 'dropdown', role: 'button', 'aria-haspopup' => 'true', 'aria-expanded' => 'false' do
+              = icon('user', class: 'fw fa-lg')
+              = current_user.name
+              %span.caret
+            %ul.dropdown-menu
+              / %li= link_to icon('cog', class: 'fw') + ' Account'
+              / %li= link_to icon('wrench', class: 'fw') + ' Categories'
+              %li= link_to icon('sign-out', class: 'fw') + ' Logout', logout_path, method: :delete
+
+        - else
+          %li= link_to icon('sign-in fa-lg') + ' Login', login_path

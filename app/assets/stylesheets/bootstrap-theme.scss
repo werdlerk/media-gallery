@@ -86,22 +86,59 @@ a.thumbnail {
   }
 }
 
-.navbar-fixed-top {
+/* Login page
+-------------------------------------------------- */
 
-  .navbar-header {
+form#login {
+  max-width: 280px;
+  margin-top: -60px;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  text-align: center;
 
-    a.navbar-brand {
-      font-family: 'Yesteryear', arial, helvetica, sans;
-      text-align: center;
-      font-size: 3em;
-      font-weight: 200;
-      text-shadow: 3px 4px 0px #1c73a5;
-      position: relative;
-      top: 5px;
-      z-index: 105;
-    }
+  .brand {
+    font-family: 'Yesteryear', arial, helvetica, sans;
+    text-align: center;
+    text-decoration: none;
+    font-size: 4em;
+    font-weight: 200;
+    text-shadow: 3px 4px 0px #FFF;
+    color: #3097d1;
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 40px;
   }
+
+  input[type="email"] {
+    margin-bottom: 15px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  input[type="password"] {
+    margin-bottom: 30px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .form-control {
+    position: relative;
+    height: auto;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .buttons {
+    margin-bottom: 60px;
+  }
+  .links a {
+    color: #9da9b0;
+  }
+
 }
+
 
 
 /* Sticky footer styles

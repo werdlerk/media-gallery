@@ -1,0 +1,17 @@
+.gc.us
+  .uu
+    = form_tag login_path, method: :post, id:'login' do
+      = render 'shared/messages'
+
+      = link_to 'Media Gallery', root_path, class:'brand'
+
+      = email_field_tag :email, params[:email], class: 'form-control', placeholder: 'E-mail address', required: true, autofocus: true
+
+      = password_field_tag :password, params[:password], class: 'form-control', placeholder: 'Password', required: true
+
+      .buttons
+        = submit_tag 'Log in', class: 'btn btn-primary'
+        = link_to 'Sign up', register_path, class: 'btn btn-default'
+
+      .links
+        = link_to 'Forgot password'

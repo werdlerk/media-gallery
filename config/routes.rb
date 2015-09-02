@@ -7,6 +7,13 @@ Rails.application.routes.draw do
 
   resources :media
 
+  resources :sessions, only: [:new, :create, :destroy]
+
+  get 'register' => 'sessions#new'
+  get 'login' => 'sessions#new'
+  post 'login' => 'sessions#create'
+  delete 'logout' => 'sessions#destroy'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
