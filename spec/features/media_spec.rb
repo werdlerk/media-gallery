@@ -4,6 +4,10 @@ feature 'Media' do
   given!(:user) { FactoryGirl.create(:user) }
   given!(:media) { (1..5).each { |i| FactoryGirl.create(:media, url: "http://brocknunn.com/untame/bootstrap-gallery/img/pics/#{i}.jpg", user: user) } }
 
+  background do
+    log_in_user(user)
+  end
+
   scenario 'media index' do
     visit media_index_path
 
