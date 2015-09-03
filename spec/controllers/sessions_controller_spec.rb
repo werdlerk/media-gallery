@@ -11,7 +11,7 @@ describe SessionsController do
     end
 
     it "redirects to the home page for authenticated users" do
-      request.session[:user_id] = user.id
+      sign_in
 
       get :new
 
@@ -55,24 +55,48 @@ describe SessionsController do
         expect(flash[:success]).to be_present
       end
     end
-  end
 
-  describe "GET #destroy" do
-    before do
-      request.session[:user_id] = user.id
-      get :destroy
-    end
+    it "redirects to the home page for authenticated users" do
+      sign_in
 
-    it "clears the session id for the user" do
-      expect(session[:user_id]).to be_nil
-    end
+      post :create
 
-    it "redirects to the root path" do
       expect(response).to redirect_to root_path
     end
+  end
 
-    it "sets the success notice" do
-      expect(flash[:success]).to be_present
+  describe "DELETE #destroy" do
+    context "authenticated users" do
+      before do
+        sign_in
+        delete :destroy
+      end
+
+      it "clears the session id for the user" do
+        expect(session[:user_id]).to be_nil
+      end
+
+      it "redirects to the root path" do
+        expect(response).to redirect_to root_path
+      end
+
+      it "sets the success notice" do
+        expect(flash[:success]).to be_present
+      end
+    end
+
+    context "unauthenticated users" do
+      before do
+        delete :destroy
+      end
+
+      it "redirects to the root path" do
+        expect(response).to redirect_to root_path
+      end
+
+      it "sets the flash message" do
+        expect(flash[:danger]).to be_present
+      end
     end
   end
 

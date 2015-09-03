@@ -1,7 +1,8 @@
 class SessionsController < ApplicationController
+  before_filter :require_visitor, only: [:new, :create]
+  before_filter :require_user, only: :destroy
 
   def new
-    redirect_to root_path and return if user_logged_in?
     render layout: 'blank'
   end
 

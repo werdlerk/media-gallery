@@ -1,9 +1,9 @@
 def sign_in(user = nil)
-  request.session[:user_id] = (user || Fabricate(:user)).id
+  request.session[:user_id] = (user || FactoryGirl.create(:user)).id
 end
 
 def log_in_user(user = nil)
-  user ||= Fabricate(:user)
+  user ||= FactoryGirl.create(:user)
 
   visit login_path
 

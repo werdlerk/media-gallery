@@ -1,8 +1,7 @@
 class UsersController < ApplicationController
+  before_filter :require_visitor
 
   def new
-    redirect_to root_path and return if user_logged_in?
-
     @user = User.new
     render layout: 'blank'
   end

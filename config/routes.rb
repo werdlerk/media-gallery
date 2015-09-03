@@ -5,8 +5,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'media#index'
 
-  resources :media
-
+  resources :media, only: [:index, :new, :create]
   resources :sessions, only: [:new, :create, :destroy]
   resources :users, only: [:new, :create]
 
